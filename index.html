@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon"
+        href="https://prod.cloud.rockstargames.com/crews/sc/7189/3913646/publish/emblem/emblem_512.png"
+        type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Welcome to Paradise</title>
@@ -12,36 +15,47 @@
 
 <body>
     <nav>
-        <h1>Welcome to Paradise</h1>
-        <div class="buttons">
+        <div id="nav1">
+            <h1>Welcome to Paradise</h1></div>
+            <div id="nav2">
+            <button id="search"><i class="bi bi-search-heart"></i><input type="search" name="" id="search"
+                    placeholder="Type here.."></button>
+                </div>
+
+       <div id="nav3">
+        <a href="#" id="hamburger" onclick="hmbg()"><i class="bi bi-list"></i></a>
+        <div class="buttons" id="buttons1">
             <button><i class="bi bi-house-heart"></i> Home</button>
             <div class="dropdown"> <button><i class="bi bi-controller"></i> The Game</button>
                 <div class="dropdown-links">
                     <a href="#">Characters</a>
                     <a href="#">Vehicles</a>
                     <a href="#">Locations</a>
-                    </ul>
                 </div>
 
             </div>
             <div class="dropdown"><button><i class="bi bi-music-note-beamed"></i> The Music</button>
                 <div class="dropdown-links">
-                    <a href="#">Flash FM</a>
-                    <a href="#">Fever 105</a>
-                    <a href="#">Emotion 98.3</a>
-                    </ul>
+                    <a href="#" id="flash">Flash FM
+                    <audio src="/projects/vice city/flashfm1.mp3" id="flashaudio"></audio></a>
+                    <a href="#" id="fever">Fever 105
+                        <audio src="/projects/vice city/fever105-1.mp3" id="feveraudio"></audio></a>
+                    <a href="#" id="emotion">Emotion 98.3
+                        <audio src="/projects/vice city/emotion.mp3" id="emotionaudio"></audio></a>
+                    <a href="#" id="vrock">V-Rock
+                        <audio src="/projects/vice city/vrock1.mp3" id="vrockaudio"></audio></a>
+                    <a href="#" id="wave">Wave 103
+                        <audio src="/projects/vice city/wave103.mp3" id="waveaudio"></audio></a>
                 </div>
             </div>
-
         </div>
-
+    </div>
 
     </nav>
 
     <div id="slidesContainer">
         <div class="slides fade">
-            <img src="https://wallpaperset.com/w/full/1/9/8/466320.jpg"
-                alt="">
+            <img src="https://wallpaperset.com/w/full/1/9/8/466320.jpg" alt="">
         </div>
         <div class="slides fade">
             <img src="https://img.gta5-mods.com/q95/images/gta-vice-city-definitive-edition-loading-screen-pack-5d8c6e2e-de35-4166-90f4-dcda34521ece/1e358b-loadingnewsscreenbg6.jpg"
@@ -51,12 +65,10 @@
             <img src="https://www.chip.de/ii/1/2/3/6/4/7/2/7/9/8c4ce1f93cc7b8af.jpg" alt="">
         </div>
         <div class="slides fade">
-            <img src="https://images8.alphacoders.com/578/578422.jpg"
-                alt="">
+            <img src="https://images8.alphacoders.com/578/578422.jpg" alt="">
         </div>
         <div class="slides fade">
-            <img src="https://i.pinimg.com/originals/be/a0/2c/bea02c3eabc96bc6fd63bfc3d7b30df3.png"
-                alt="">
+            <img src="https://i.pinimg.com/originals/be/a0/2c/bea02c3eabc96bc6fd63bfc3d7b30df3.png" alt="">
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -65,9 +77,8 @@
         <br>
         <div id="row">
             <div class="thumbnail">
-                <img class="tn"
-                    src="https://wallpaperset.com/w/full/1/9/8/466320.jpg"
-                    alt="" onclick="modal(this)" onmouseover="currentSlide(1)">
+                <img class="tn" src="https://wallpaperset.com/w/full/1/9/8/466320.jpg" alt="" onclick="modal(this)"
+                    onmouseover="currentSlide(1)">
             </div>
             <div class="thumbnail">
                 <img class="tn"
@@ -76,16 +87,14 @@
             </div>
             <div class="thumbnail">
                 <img class="tn" src="https://www.chip.de/ii/1/2/3/6/4/7/2/7/9/8c4ce1f93cc7b8af.jpg" alt=""
-                onclick="modal(this)" onmouseover="currentSlide(3)">
+                    onclick="modal(this)" onmouseover="currentSlide(3)">
             </div>
             <div class="thumbnail">
-                <img class="tn" 
-                    src="https://images8.alphacoders.com/578/578422.jpg"
-                    alt="" onclick="modal(this)" onmouseover="currentSlide(4)">
+                <img class="tn" src="https://images8.alphacoders.com/578/578422.jpg" alt="" onclick="modal(this)"
+                    onmouseover="currentSlide(4)">
             </div>
             <div class="thumbnail">
-                <img class="tn"
-                    src="https://i.pinimg.com/originals/be/a0/2c/bea02c3eabc96bc6fd63bfc3d7b30df3.png"
+                <img class="tn" src="https://i.pinimg.com/originals/be/a0/2c/bea02c3eabc96bc6fd63bfc3d7b30df3.png"
                     alt="" onclick="modal(this)" onmouseover="currentSlide(5)">
             </div>
 
@@ -111,9 +120,10 @@
         </div>
     </div>
 
-    <div id="modalContainer"> <!-- apartado del modal -->
+    <div id="modalContainer">
+        <!-- apartado del modal -->
         <p id="close">x</p>
-         <img src="https://wallpapercave.com/wp/wp1899035.jpg" alt="" id="modalImg">
+        <img src="https://wallpapercave.com/wp/wp1899035.jpg" alt="" id="modalImg">
         <div id="modalImgs">
             <img src="https://wallpapercave.com/wp/wp1899000.jpg" alt="">
             <img src="https://wallpapercave.com/wp/wp1908604.jpg" alt="">
@@ -123,6 +133,7 @@
         </div>
         <p>People love it when you lose, they love <em>dirty laundry ♫</em></p>
     </div>
+
 </body>
 <script src="script.js"></script>
 <script src="sparkle.js"></script>

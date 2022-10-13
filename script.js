@@ -76,3 +76,54 @@ window.onclick = function(event) {
       modalC.style.display = 'none';
   }
 }
+
+/* hamburger */ 
+
+function hmbg() {
+  const links = document.getElementById('buttons1');
+
+  if (links.style.display === 'none') {
+    links.style.display = 'block';
+  } else {
+    links.style.display = 'none';
+  }
+
+}
+
+
+/* sounds */
+
+const flashfm = document.getElementById('flash');
+const fever105 = document.getElementById('fever');
+const emotion98 = document.getElementById('emotion');
+const vrockfm = document.getElementById('vrock');
+const wave103 = document.getElementById('wave');
+
+flashfm.addEventListener('click', () => {
+  const audio0 = document.getElementById("flashaudio");
+  audio0.play();
+})
+
+fever105.addEventListener('click', () => {
+  const audio1 = document.getElementById("feveraudio");
+  audio1.play();
+})
+
+
+emotion98.addEventListener('click', () => {
+  const audio2 = document.getElementById("emotionaudio");
+  audio2.play();
+})
+
+vrockfm.addEventListener('click', () => {
+  const audio3 = document.getElementById("vrockaudio");
+  audio3.play();
+})
+
+wave103.addEventListener('click', () => {
+  const audio4 = document.getElementById("waveaudio");
+  audio4.play();
+})
+
+
+const characters = ['tommy, sonny, candy, ken, mercedes'];

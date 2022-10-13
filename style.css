@@ -5,14 +5,17 @@ body {
   color: #ffffff;
   font-family: sans-serif;
   font-size: 15px;
+  width: 100%;
+  animation: fade ease 6s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
-
 
 h1 {
   font-family: Arial;
   font-weight: lighter;
   font-style: italic;
-  font-size: 30px;
+  font-size: 25px;
   margin: auto;
   color: #ffffff;
   text-shadow: 0 0 10px #ffffff;
@@ -24,11 +27,55 @@ h1:hover {
 
 nav {
   background: url('https://wallpaperset.com/w/full/2/f/c/466272.jpg');
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 5px;
+  display: inline-flex;
   width: 100%;
   overflow: hidden;
+}
+
+
+#nav1 {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  margin: 5px;
+}
+
+#nav2 {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  padding-right: 25px;
+  margin: auto;
+}
+
+#nav3 {
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  padding-right: 85px;
+  margin: 5px;
+}
+
+#hamburger {
+  position: absolute;
+  right: 45px;
+}
+  
+input[type="search"] {
+  border: none;
+
+}
+
+@media only screen and (max-width: 600px) {
+  #search {
+    width: 80%;
+    height: auto;
+  }
+
+  input[type="search"] {
+    font-size: 11px;
+  }
+
 }
 
 .dropdown {
@@ -62,6 +109,21 @@ nav {
 
 .dropdown:hover .dropdown-links {
   display: block;
+}
+
+a {
+  margin: auto;
+  font-size: 25px;
+  color: #9d63a8;
+  text-shadow: 0 0 5px #fff;
+}
+
+a:hover {
+  color: #636ba8;
+}
+
+nav .buttons {
+  display: none;
 }
 
 
@@ -101,8 +163,7 @@ button:hover {
   width: 100%;
 }
 
-.prev,
-.next {
+.prev, .next {
   cursor: pointer;
   position: absolute;
   top: 40%;
@@ -119,7 +180,6 @@ button:hover {
 
 }
 
-
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
@@ -130,7 +190,6 @@ button:hover {
 .next:hover {
   background-color: #c8c7c7;
 }
-
 
 .active,
 .dot:hover {
@@ -163,7 +222,6 @@ button:hover {
   }
 }
 
-
 /* thumbnails */
 
 #row {
@@ -181,8 +239,6 @@ button:hover {
   padding: 2px;
 }
 
-
-
 .tn {
   display: inline-flex;
   flex-direction: row;
@@ -192,8 +248,7 @@ button:hover {
 }
 
 
-.active,
-.tn:hover {
+.active, .tn:hover {
   opacity: 1;
 }
 
